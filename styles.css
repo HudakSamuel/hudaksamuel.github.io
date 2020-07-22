@@ -1,0 +1,306 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap');
+body{
+    font-family: monospace;
+    text-align: center;
+    margin: 0;
+}
+
+img{
+    max-width: 100%;
+    height:auto;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+/*===TYPOGRAPHY===*/
+#home-title{
+    font-family: bungee inline, monospace;
+    font-size: 1.2rem;
+}
+
+nav{
+    font-size: medium;
+}
+
+.home-hero span{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.1rem;
+    /*color:  #f0faff;*/
+    color: black;
+}
+
+.about h1{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 0.9rem;
+    font-weight: lighter;
+    text-decoration: underline;
+}
+
+.about span{
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 25px;
+}
+
+.portfolio h1{
+    font-size: 1.3rem;
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    font-weight: bold;
+}
+
+.source-button{
+    font-family: 'Ubuntu', sans-serif;
+    color: #951717
+}
+
+.check-button{
+    font-family: 'Ubuntu', sans-serif;
+    color: black;
+}
+
+.projects h2{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 0.9rem;
+    font-weight: lighter;
+    text-decoration: underline;
+}
+
+
+/*===HEADER===*/
+#home-title{
+    position: absolute;
+    left: 0;
+    margin: 0.5em;
+    margin-left: 0.75em;
+    z-index: 2;
+}
+
+@media (min-width: 615px){
+    #home-title{
+        font-size: 2.2rem;
+    }
+}
+
+nav{
+    position: absolute;
+    display: inline-block;
+    right: 0;
+    margin: 1em;
+    z-index: 2;
+}
+
+nav i{
+    color: black;
+    padding: .4em;    
+}
+
+nav i:hover,
+nav i:focus{
+    color: lightcyan;
+}
+
+@media (min-width: 615px){
+    nav{
+        font-size: 2rem;
+    }
+}
+
+
+
+
+/*===BACKGROUND===*/
+.background{
+    background-color: #464646;
+    background-image: url(diego.jpg);
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 99%, #c74642 100%),url(diego.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10em;
+    position: relative;
+    
+    margin:auto;
+}
+
+@media (min-width: 615px){
+    .background {
+        height: 100vh;
+    }
+}
+
+
+/*===HOME-HERO===*/
+.home-hero{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 4em;
+
+}
+
+.home-hero i{
+    /*color: #f0faff;*/
+    padding: 0.5em;
+    color: black;
+}
+
+
+@media (min-width: 615px){
+    .home-hero{
+        top: 40em;
+    }*
+
+    .home-hero i:hover,
+    .home-hero i:focus{
+        font-size: 3rem;
+    }
+    .home-hero span{
+        font-size: 2.5rem;
+    }
+
+    .home-hero i{
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-height: 650px) and (min-width: 615px){
+    .home-hero{
+        top: 24em;
+    }
+}
+
+/*===ABOUT===*/
+.container{
+
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+
+.about{
+    text-align: justify;
+    margin-left: 2em;
+    margin-right: 1em;
+}
+
+.about h1{
+    padding-bottom: 1em;
+}
+
+@media (min-width: 725px){
+    .container{
+        padding-top: 12em;
+        padding-bottom: 12em;
+    }
+    .about{
+        display: flex;
+        justify-content: center;
+    }
+
+    .about h1{
+        transform: rotate(-90deg);
+        font-size: 1.2rem;
+    }
+
+    .about span{
+        font-size: 1.4rem;
+        max-width: 40%;
+    }
+    
+}
+
+
+/*===PORTFOLIO===*/
+.portfolio{
+    background-color: rgb(240, 230, 230);
+    padding-bottom: 5em;
+
+}
+.projects{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 5em;
+    
+}
+
+.portfolio h1{
+    margin: 0;
+    padding: 1.3em;
+    background: linear-gradient(#928c8c,  #951717 5%);
+
+}
+
+.projects img{
+    border-style: solid;
+    border-color: rgb(179, 173, 173);
+    border-width: thin;
+    border-radius: 20px;
+    
+}
+
+.projects figure{
+    position: relative;
+}
+
+.portfolio-button{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 5em;
+    right: 5em;
+    bottom: 1.3em;
+    max-width: 40%;
+    margin: auto;
+}
+
+.source-button{
+    margin: 0.5em;
+    border-style: solid;
+    text-decoration: none;
+    padding: 0.5em;
+    border-color: #951717;
+    
+}
+
+.check-button{
+    border-style: solid;
+    text-decoration: none;
+    padding: 0.5em;
+    border-color: black;
+}
+
+figure:hover img{
+    filter: blur(3px);
+    
+}
+
+.source-button:focus,
+.source-button:hover{
+    background-color: #951717;
+    color: white;
+}
+
+.check-button:focus,
+.check-button:hover{
+    background-color: black;
+    color: white;
+}
+
+@media (min-width: 1100px){
+    .projects{
+        flex-direction: row;
+        margin-top: 8em;
+    }
+
+    .portfolio h1{
+        padding: 1.5em;
+        font-size: 2rem;
+    }
+}
+
